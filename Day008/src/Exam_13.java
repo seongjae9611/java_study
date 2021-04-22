@@ -14,11 +14,13 @@ public class Exam_13 {
 			}while(bool);
 			System.out.print(comp[i] + "\t");
 		}
+		System.out.println();
 		
 		int[] my = new int[3];
 		int count = 0;
-		int strike = 0, ball = 0;
+		
 		while(true) {
+			int strike = 0, ball = 0;	
 			System.out.print("세개수를 연속적으로 입력 = ");
 			for(int i = 0; i < my.length; ++i) {
 				my[i] = System.in.read() - 48;
@@ -33,6 +35,7 @@ public class Exam_13 {
 					}
 				}
 			}
+			System.out.println(strike + "strike, " + ball + "ball");
 			count++;
 			if(strike == 3) break;	
 		}

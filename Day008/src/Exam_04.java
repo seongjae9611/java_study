@@ -12,5 +12,6 @@ public class Exam_04 {
 		for(int i = 0; i < x.length; ++i) {
 			System.out.println("x[" + i + "] = " + x[i]);
 		}
+		int sdd;
 	}
 }

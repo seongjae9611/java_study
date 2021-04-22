@@ -1,18 +1,17 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-public class Exam_18 {
-	public static void main(String[] ar) throws IOException {
-		if(ar.length !=2) {
-			System.err.println("Usage : java Exam_13 층의개수, 방의 개수");
-			System.exit(0);
-		}
-		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-		
-		int num = Integer.parseInt(ar[0]); //층
-		int num1 = Integer.parseInt(ar[1]); //방
-		String[][]name = new String[num][num1];
-		
+import java.io.*;
+public class Exam_09 {
+	private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	private int num;
+	private int num1;
+	private String[][]name;
+	public Exam_09(String floor, String room) {
+		in = new BufferedReader(new InputStreamReader(System.in));
+		num = Integer.parseInt(floor); //층
+		num1 = Integer.parseInt(room); //방
+		name = new String[num][num1];
+	}
+	
+	public void process() throws IOException {
 		while(true) {
 			System.out.print("1.투숙 2.퇴실 3.전체보기 4.종료 = ");
 			int x = System.in.read() - 48;
@@ -66,6 +65,17 @@ public class Exam_18 {
 			}
 			System.out.println();	
 		}
+	}
+	
+	public static void main(String[] ar) throws IOException {
+		if(ar.length !=2) {
+			System.err.println("Usage : java Exam_13 층의개수, 방의 개수");
+			System.exit(0);
+		}
+		
+		Exam_09 ex = new Exam_09(ar[0], ar[1]);
+		ex.process();
+		
 		System.out.println("시스템 종료");
 		
 	}
