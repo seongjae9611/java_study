@@ -1,7 +1,7 @@
 class Outer {
-	private int x = 100;
+	int x = 100;
 	private static int y = 200;
-	private Outer() {}
+	public Outer() {}
 	public void disp() {
 		System.out.println("x = " + x);
 		System.out.println("y = " + y);
